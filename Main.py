@@ -10,7 +10,7 @@ import random
 import os
 from discord.ext.commands import Bot, DefaultHelpCommand
 
-token = "MTA5MTczMTE2NjQyMTMxOTY4MQ.GmDELF.SR6kSZkAZr7YnHyzBouNGkR9KOP2MtaTe-tBL0"     #You Bot Token
+token = "123"     #You Bot Token
 
 intents = discord.Intents.all()
 intents.members = True
@@ -208,9 +208,9 @@ def main():
     async def on_ready():
         print("Bot has connected")
         
-    for filename in os.listdir("assets"):
-        if filename.endswith(".py"):
-            bot.load_extension(f"assets.{filename[:-3]}")
+        for filename in os.listdir("assets"):
+            if filename.endswith(".py"):
+                bot.load_extension(f"assets.{filename[:-3]}")
     bot.run(token)
 
 if __name__ == '__main__':
